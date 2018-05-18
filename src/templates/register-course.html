@@ -1,0 +1,46 @@
+<!-- <div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
+  <div class="col-xs-12">
+    <uib-alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+  </div>
+</div> -->
+
+<div class="row">
+	<div class="col-lg-10">
+		<rd-widget>
+  		<rd-widget-header icon="fa-tasks" title="Register Course">
+		    <!-- <a href="#">Register Course</a> -->
+  		</rd-widget-header>
+  		<rd-widget-body classes="medium no-padding">
+
+        <form role="form" name="registerCourseForm" data-ng-submit="registerNewCourse()">
+          <div class="form-group row">
+            <label for="name" class="col-2 col-form-label">Name of course</label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="name" name="name" data-ng-model="courseData.name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="name" class="col-2 col-form-label">Name of instructor</label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="instructor" name="instructor" data-ng-model="courseData.instructor">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="name" class="col-2 col-form-label">Name of room</label>
+            <div class="col-10">
+              <input class="form-control" type="text" id="room" name="room" data-ng-model="courseData.room">
+            </div>
+          </div>
+
+					<div class="form-group row">
+						<input type="submit" class="btn btn-primary" value="Save" data-ng-disabled="registerCourseForm.$invalid">
+					</div>
+        </form>
+
+	    </rd-widget-body>
+		</rd-widget>
+	</div>
+
+</div>
